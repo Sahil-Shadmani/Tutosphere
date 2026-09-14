@@ -1,6 +1,7 @@
-import React, { use, useState } from 'react'
+import React, { useState } from 'react'
 import { NavbarMenu } from '../../MockData/data'
 import {MdComputer, MdMenu} from 'react-icons/md'
+import ResponsiveMenu from './ResponsiveMenu';
 const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -47,14 +48,18 @@ const Navbar = () => {
                 
                 {/* Mobile Hamburger Menu */}
 
-                <div className='lg:hidden onClick={()=>{
-                  setIsOpen(!isOpen)}}'>
+                <div className='lg:hidden'onClick={()=>{
+                  setIsOpen(!isOpen)}}>
                   <MdMenu className='text-4xl'/>
                 </div>
             
             </div>
         
         </nav>
+
+        {/* Mobile Sidebar Menu */}
+        <ResponsiveMenu isOpen={isOpen}/>
+
     </>
   )
 }
