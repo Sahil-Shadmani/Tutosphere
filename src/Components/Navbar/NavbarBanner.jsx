@@ -1,25 +1,45 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from "react";
+
 const NavbarBanner = () => {
+  const [isOpen, setIsOpen] = useState(true);
 
-    const [isOpen, setIsOpen] = useState(true);
+  if (!isOpen) {
+    return null;
+  }
 
-    return (
-        isOpen && (
-            <div className='bg-primary text-sm text-center font-semibold p-1 hidden lg:block relative'>
-                Are you a university or school student for an online tutoring
-                partnership?
-                <a href="#" className='text-secondary ml-2'>
-                    Talk to us
-                </a>
-                <div className='absolute top-1/2 right-10 cursor-pointer -translate-y-1/2' onClick={() => {
-                    setIsOpen(false)
-                }}>
-                    X
-                </div>
-            </div>
-        )
-    )
-}
+  return (
+    <div className="bg-primary text-sm text-center font-semibold py-2 px-10 relative">
+      <span>
+        Find the right tutor for your learning goals.
+      </span>
 
-export default NavbarBanner
+      <a
+        href="#tutors"
+        className="text-secondary ml-2 hover:underline"
+      >
+        Explore Tutors →
+      </a>
+
+      <button
+        type="button"
+        aria-label="Close announcement"
+        className="
+          absolute
+          top-1/2
+          right-5
+          -translate-y-1/2
+          cursor-pointer
+          font-bold
+          hover:text-secondary
+          transition-colors
+          duration-200
+        "
+        onClick={() => setIsOpen(false)}
+      >
+        ×
+      </button>
+    </div>
+  );
+};
+
+export default NavbarBanner;

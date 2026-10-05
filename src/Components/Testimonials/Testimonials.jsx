@@ -1,72 +1,76 @@
 import React from 'react'
 import Slider from 'react-slick'
+import { FaStar, FaQuoteLeft } from 'react-icons/fa'
 
 const TestimonialsData = [
   {
     id: 1,
-    name: "John Doe",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Sarah Mitchell",
+    role: "Computer Science Student",
+    text: "Finding a tutor that matched my schedule was so easy. The whole experience felt simple and convenient.",
     img: "https://picsum.photos/101/101",
-    delay: 0.2,
   },
   {
     id: 2,
-    name: "Steve Smith",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Alex Carter",
+    role: "Mathematics Student",
+    text: "I really liked how easy it was to explore different tutors and find someone who matched my learning style.",
     img: "https://picsum.photos/102/102",
-    delay: 0.5,
   },
   {
     id: 3,
-    name: "Kristen",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Priya Sharma",
+    role: "Engineering Student",
+    text: "The flexible scheduling made it much easier to fit tutoring sessions around my classes and daily routine.",
     img: "https://picsum.photos/104/104",
-    delay: 0.8,
   },
   {
     id: 4,
-    name: "John Doe",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Daniel Wilson",
+    role: "Programming Student",
+    text: "The platform makes finding the right tutor feel straightforward. I could quickly compare my options.",
     img: "https://picsum.photos/105/105",
-    delay: 1.0,
   },
   {
     id: 5,
-    name: "Ariana",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Emily Johnson",
+    role: "English Student",
+    text: "I enjoyed the simple interface and the ability to choose a tutor based on my specific learning goals.",
     img: "https://picsum.photos/103/103",
-    delay: 1.1,
   },
-];
+  {
+    id: 6,
+    name: "Michael Brown",
+    role: "Physics Student",
+    text: "It was easy to find a tutor who understood what I needed help with. The flexible sessions were a big plus.",
+    img: "https://picsum.photos/106/106",
+  },
+  {
+    id: 7,
+    name: "Olivia Davis",
+    role: "Psychology Student",
+    text: "The clean interface made everything easy to understand, and I could quickly find a tutor that suited my goals.",
+    img: "https://picsum.photos/107/107",
+  },
+]
 
 const Testimonials = () => {
 
-  const setting = {
+  const settings = {
     dots: true,
-    arrow: false,
+    arrows: false,
     infinite: true,
-    speed: 500,
-    slidesToScroll: 1,
-    // autoplay: true,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
+    speed: 600,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    autoplay: false,
     pauseOnHover: true,
-    pauseOnFocus: true,
     responsive: [
-      {
-        breakpoint: 10000,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
+          slidesToScroll: 2,
         },
       },
       {
@@ -77,61 +81,104 @@ const Testimonials = () => {
         },
       },
     ],
-  };
+  }
 
   return (
-    <div className='py-14 mb-10'>
-        <div className="container">
+    <section id="testimonials" className="bg-[#f9fafc] py-20">
 
-            {/* Header Section */}
+      <div className="container">
 
-            <div className='space-y-4 p-6 text-center max-w-[600px] mx-auto mb-6'>
-              <h1 className='uppercase font-semibold text-orange-600'>Our TESTIMONIALS</h1>
-              <p className='font-semibold text-3xl'>
-                What Our Students Say About Us
-              </p>
-            </div>
-            
-            {/* Testimonial Card Section */}
+        {/* Header Section */}
 
-            <div>
-              <Slider {...setting}>
-                {
-                  TestimonialsData.map((item)=>{
-                    return (
-                      <div key={item.id}>
-                          <div className='flex flex-col gap-4 p-8 shadow-lg mx-4 rounded-xl bg-secondary/10'>
-                            
-                            {/* Upper Section */}
+        <div className="text-center max-w-[600px] mx-auto mb-12">
+          <h2 className="uppercase font-semibold text-orange-600">
+            Our Testimonials
+          </h2>
 
-                            <div className='flex justify-start items-center gap-5'>
-                              <img src={item.img} alt="" className='w-16 h-16 rounded-full' />
-                              <div>
-                                <p className='text-xl font-bold text-black/80'>{item.name}</p>
-                                <p className=''>{item.name}</p>
-                              </div>
-                            </div>
+          <p className="font-semibold text-3xl md:text-4xl mt-3">
+            What Our Students Say
+          </p>
 
-                            {/* Bottom Section */}
-                            <div className='py-6 space-y-4'>
-                              <p className='text-sm text-gray-500'>
-                                  {
-                                    item.text
-                                  }
-                              </p>
-                              <p>⭐⭐⭐⭐⭐</p>
-                            </div>
+          <p className="text-gray-500 mt-4">
+            See how students are finding the right tutors and making
+            learning more flexible.
+          </p>
+        </div>
 
-                          </div>
+        {/* Testimonial Slider */}
+
+        <div className="testimonial-slider -mx-3">
+
+          <Slider {...settings}>
+
+            {TestimonialsData.map((item) => (
+              <div key={item.id} className="px-3 pb-8">
+
+                <div className="bg-white border border-gray-200 rounded-2xl p-7 min-h-[310px] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+
+                  {/* Top Section */}
+
+                  <div className="flex justify-between items-center mb-6">
+
+                    <div className="w-11 h-11 rounded-full bg-secondary/10 flex items-center justify-center">
+                      <FaQuoteLeft className="text-secondary" />
+                    </div>
+
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, index) => (
+                        <FaStar
+                          key={index}
+                          className="text-primary text-sm"
+                        />
+                      ))}
+                    </div>
+
+                  </div>
+
+                  {/* Testimonial */}
+
+                  <p className="text-gray-600 text-sm leading-7 min-h-[120px]">
+                    "{item.text}"
+                  </p>
+
+                  {/* Student */}
+
+                  <div className="border-t border-gray-100 mt-6 pt-5">
+
+                    <div className="flex items-center gap-4">
+
+                      <img
+                        src={item.img}
+                        alt={item.name}
+                        className="w-12 h-12 rounded-full object-cover"
+                      />
+
+                      <div>
+                        <p className="font-semibold text-black/80">
+                          {item.name}
+                        </p>
+
+                        <p className="text-sm text-gray-500 mt-1">
+                          {item.role}
+                        </p>
                       </div>
-                    )
-                  })
-                }
-              </Slider>
-            </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            ))}
+
+          </Slider>
 
         </div>
-    </div>
+
+      </div>
+
+    </section>
   )
 }
 

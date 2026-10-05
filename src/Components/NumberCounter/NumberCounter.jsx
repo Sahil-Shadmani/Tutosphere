@@ -8,11 +8,11 @@ const NumberCounter = () => {
                 <p className='text-3xl font-semibold'>
                     <CountUp 
                     start={0} 
-                    end={898} 
+                    end={225} 
                     duration={3} 
                     />
                 </p>
-                <p>Expert tutors</p>
+                <p>Expert Tutors</p>
             </div>
             <div className='flex flex-col items-center justify-center'>
                 <p className='text-3xl font-semibold'>
@@ -20,21 +20,21 @@ const NumberCounter = () => {
                     start={0}
                     separator=','
                     suffix='+' 
-                    end={20000} 
+                    end={10000} 
                     duration={3} 
                     />
                 </p>
-                <p>Hours content</p>
+                <p>Learning Hours</p>
             </div>
             <div className='flex flex-col items-center justify-center'>
                 <p className='text-3xl font-semibold'>
                     <CountUp 
                     start={0} 
-                    end={298} 
+                    end={128} 
                     duration={3} 
                     />
                 </p>
-                <p>Subject and courses</p>
+                <p>Subjects & Courses</p>
             </div>
             <div className='flex flex-col items-center justify-center'>
                 <p className='text-3xl font-semibold'>
@@ -42,11 +42,11 @@ const NumberCounter = () => {
                     start={0} 
                     separator=','
                     suffix='+'
-                    end={72878} 
+                    end={7500} 
                     duration={3} 
                     />
                 </p>
-                <p>Active students</p>
+                <p>Active Students</p>
             </div>
         </div>
     </div>

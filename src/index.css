@@ -5,6 +5,9 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 @layer components {
   .primary-btn {
     @apply bg-primary font-semibold px-6 py-3 rounded-full

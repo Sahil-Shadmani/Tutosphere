@@ -4,7 +4,7 @@ import { FaBook } from "react-icons/fa";
 const subjectList = [
   {
     id: 1,
-    name: "Engineering",
+    name: "Mathematics",
     icon: <FaBook />,
     color: "#0063ff",
   },
@@ -40,45 +40,63 @@ const subjectList = [
   },
   {
     id: 7,
-    name: "Web design",
+    name: "Web Development",
     icon: <FaBook />,
     color: "#b93838",
   },
   {
     id: 8,
-    name: "See all",
+    name: "See All Subjects",
     icon: <FaBook />,
     color: "#464646",
   },
 ];
 
 const SubjectCard = () => {
-  return <>
-    <div className="container py-14 md:py-24">
-        
+  return (
+    <>
+      <div id="subjects" className="container py-14 md:py-24">
+
         {/* Header Section */}
 
         <div className="space-y-4 p-6 text-center max-w-[600px] mx-auto mb-5">
-            <h1 className="uppercase font-semibold text-orange-500">Our tutor subjects</h1>
-            <p className="font-semibold text-3xl">Find Online Tutor in Any Subject</p>
+          <h1 className="uppercase font-semibold text-orange-500">
+            Explore Subjects
+          </h1>
+
+          <p className="font-semibold text-3xl">
+            Find a Tutor for Any Subject
+          </p>
         </div>
 
         {/* Cards Section */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {subjectList.map((subject)=>{
-                return (
-                    <div key={subject.id} className="border rounded-lg border-secondary/20 p-4 flex justify-start items-center gap-4 hover:!scale-105 hover:!shadow-xl transition-all duration-200 cursor-pointer ">
-                        <div style={{color:subject.color,backgroundColor: subject.color+"20"}} className="w-10 h-10 rounded-md flex justify-center items-center">{subject.icon}</div>
-                        <p>{subject.name}</p>
+          {subjectList.map((subject) => {
+            return (
+              <div
+                key={subject.id}
+                className="border rounded-lg border-secondary/20 p-4 flex justify-start items-center gap-4 hover:!scale-105 hover:!shadow-xl transition-all duration-200 cursor-pointer"
+              >
+                <div
+                  style={{
+                    color: subject.color,
+                    backgroundColor: subject.color + "20",
+                  }}
+                  className="w-10 h-10 rounded-md flex justify-center items-center"
+                >
+                  {subject.icon}
+                </div>
 
-                    </div>
-                )
-            })}
+                <p>{subject.name}</p>
+              </div>
+            );
+          })}
         </div>
 
-    </div>
-  </>;
+      </div>
+    </>
+  );
 };
 
 export default SubjectCard;

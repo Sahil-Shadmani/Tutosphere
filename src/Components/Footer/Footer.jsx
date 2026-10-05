@@ -1,217 +1,171 @@
-import React from 'react'
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
-import { HiLocationMarker } from 'react-icons/hi'
-import { MdComputer } from 'react-icons/md'
-import FooterImg from '../../assets/FooterImg.png'
+import React from "react";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { MdComputer } from "react-icons/md";
+import FooterImg from "../../assets/FooterImg.png";
 
 const FooterBg = {
   backgroundImage: `url(${FooterImg})`,
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
   backgroundPosition: "bottom center",
-}
+};
 
 const Footer = () => {
   return (
-    <div style={FooterBg} className="rounded-t-3xl">
-      <div className='bg-primary/5'>
+    <footer style={FooterBg} className="rounded-t-3xl">
+      <div className="bg-primary/5">
+
         <div className="container">
 
-        <div className="grid grid-cols-1 md:grid-cols-4 md:gap-4 py-5 border-t-2 border-gray-300/10 text-black">
+          {/* Main Footer */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-12">
 
-          {/* Brand Info Section */}
+            {/* Brand */}
+            <div className="px-4">
 
-          <div className="py-8 px-4 space-y-4">
-            <div className="text-2xl flex items-center gap-2 font-bold uppercase">
-              <MdComputer className="text-secondary text-4xl" />
-              <p>E-Tutor</p>
+              <a
+                href="#home"
+                className="flex items-center gap-2 text-2xl font-bold"
+              >
+                <MdComputer className="text-secondary text-4xl" />
+                <span>TutoSphere</span>
+              </a>
+
+              <p className="mt-5 max-w-[350px] text-gray-600 leading-6">
+                Find the right tutor, explore subjects, and discover
+                flexible learning options that fit your goals.
+              </p>
+
+              {/* Social Icons */}
+              <div className="flex items-center gap-5 mt-6">
+
+                <a
+                  aria-label="Instagram"
+                  className="hover:text-secondary hover:scale-110 transition-all duration-200"
+                >
+                  <FaInstagram className="text-2xl" />
+                </a>
+
+                 <a
+                  aria-label="LinkedIn"
+                  className="hover:text-secondary hover:scale-110 transition-all duration-200"
+                >
+                  <FaFacebook className="text-2xl" />
+                </a>
+                
+                <a
+                  aria-label="GitHub"
+                  className="hover:text-secondary hover:scale-110 transition-all duration-200"
+                >
+                  <FaXTwitter className="text-2xl" />
+                </a>
+
+                <a
+                  aria-label="LinkedIn"
+                  className="hover:text-secondary hover:scale-110 transition-all duration-200"
+                >
+                  <FaLinkedin className="text-2xl" />
+                </a>
+
+               
+
+                
+
+              </div>
+
             </div>
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Iure fugiat id tenetur consectetur similique expedita facere
-              earum a, aliquid mollitia?
-            </p>
+            {/* Navigation */}
+            <div className="px-4 md:flex md:justify-end">
 
-            {/* Social Icons */}
+              <div>
 
-            <div className="flex items-center justify-start gap-5 mt-6">
+                <h2 className="text-lg font-bold mb-5">
+                  Explore
+                </h2>
 
-              <a href="#" className="hover:text-secondary duration-200">
-                <HiLocationMarker className="text-3xl" />
-              </a>
+                <ul className="grid grid-cols-2 gap-x-12 gap-y-3">
 
-              <a href="#" className="hover:text-secondary duration-200">
-                <FaInstagram className="text-3xl" />
-              </a>
+                  <li>
+                    <a
+                      href="#home"
+                      className="text-gray-600 hover:text-secondary transition-colors duration-200"
+                    >
+                      Home
+                    </a>
+                  </li>
 
-              <a href="#" className="hover:text-secondary duration-200">
-                <FaFacebook className="text-3xl" />
-              </a>
+                  <li>
+                    <a
+                      href="#tutors"
+                      className="text-gray-600 hover:text-secondary transition-colors duration-200"
+                    >
+                      Find Tutors
+                    </a>
+                  </li>
 
-              <a href="#" className="hover:text-secondary duration-200">
-                <FaLinkedin className="text-3xl" />
-              </a>
+                  <li>
+                    <a
+                      href="#subjects"
+                      className="text-gray-600 hover:text-secondary transition-colors duration-200"
+                    >
+                      Subjects
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#how-it-works"
+                      className="text-gray-600 hover:text-secondary transition-colors duration-200"
+                    >
+                      How It Works
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#contact"
+                      className="text-gray-600 hover:text-secondary transition-colors duration-200"
+                    >
+                      Contact
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
 
             </div>
+
           </div>
 
+          {/* Bottom Bar */}
+          <div className="border-t border-gray-800/10 py-5">
 
-          {/* Footer Links */}
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-2 text-sm text-black/50">
 
-          <div className=" grid grid-cols-2 md:grid-cols-3 md:col-span-3 md:ml-14">
-            <div className='py-8 px-4'>
-              <h1 className="text-xl font-bold mb-5">
-              Important Links
-            </h1>
+              <p>
+                © 2026 TutoSphere
+              </p>
 
-            <ul className="flex flex-col gap-3">
+              <p>
+                Built with React & Tailwind CSS
+              </p>
 
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-secondary duration-200"
-                >
-                  Home
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-secondary duration-200"
-                >
-                  About
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-secondary duration-200"
-                >
-                  Services
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-secondary duration-200"
-                >
-                  Login
-                </a>
-              </li>
-
-            </ul>
             </div>
-           <div className='py-8 px-4'>
-              <h1 className="text-xl font-bold mb-5">
-              Resources
-            </h1>
 
-            <ul className="flex flex-col gap-3">
-
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-secondary duration-200"
-                >
-                  Home
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-secondary duration-200"
-                >
-                  About
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-secondary duration-200"
-                >
-                  Services
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-secondary duration-200"
-                >
-                  Login
-                </a>
-              </li>
-
-            </ul>
-            </div>
-             <div className='py-8 px-4'>
-              <h1 className="text-xl font-bold mb-5">
-              Company Links
-            </h1>
-
-            <ul className="flex flex-col gap-3">
-
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-secondary duration-200"
-                >
-                  Home
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-secondary duration-200"
-                >
-                  About
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-secondary duration-200"
-                >
-                  Services
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-secondary duration-200"
-                >
-                  Login
-                </a>
-              </li>
-
-            </ul>
-            </div>
-          </div>
-          
-          {/* Copyright Section */}
-
-          <div className="mt-8">
-            <div className="text-center py-6 border-t-2 border-gray-800/10">
-              <span className="text-sm text-black/60">
-                &copy; 2024 The Coding Journey
-              </span>
-            </div>
           </div>
 
         </div>
-        </div>
+
       </div>
-    </div>
-  )
-}
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

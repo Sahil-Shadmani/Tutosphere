@@ -12,20 +12,20 @@ import Testimonials from './Components/Testimonials/Testimonials'
 import Footer from './Components/Footer/Footer'
 const BannerData1 = {
   image: Img1,
-  tag: "CUSTOMIZE WITH YOUR SCHEDULE",
-  title: "Personalized Professional Online Tutor on Your Schedule",
+  tag: "LEARN ON YOUR SCHEDULE",
+  title: "Find a Tutor That Fits Your Schedule",
   subtitle:
-    "Our scheduling system allows you to select based on your free time. Lorem ipsum demo text for template. Keep track of your students class and tutoring schedules, and never miss your lectures. The best online class scheduling system with easy accessibility.Lorem ipsum is a placeholder text commonly used to demonstrate the visual form",
-  link: "#",
+    "Choose a tutor based on your availability and learning goals. Find flexible lesson times that fit naturally into your daily routine.",
+  link: "#tutors",
 };
 
 const BannerData2 = {
   image: Img2,
-  tag: "CUSTOMIZE WITH YOUR SCHEDULE",
-  title: "Talented and Qualified Tutors to Serve You for Help",
+  tag: "FIND THE RIGHT TUTOR",
+  title: "Learn From Tutors Who Match Your Goals",
   subtitle:
-    "Our scheduling system allows you to select based on your free time. Lorem ipsum demo text for template. Keep track of your students class and tutoring schedules, and never miss your lectures. The best online class scheduling system with easy accessibility. Lorem ipsum is a placeholder text commonly used",
-  link: "#",
+    "Explore tutors with different skills and teaching styles. Find someone who matches your subject, learning needs, and preferred way of studying.",
+  link: "#tutors",
 };
 
 const App = () => {
