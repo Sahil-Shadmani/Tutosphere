@@ -10,13 +10,15 @@ import Banner from './Components/Banner/Banner'
 import SubjectCard from './Components/SubjectCard/SubjectCard'
 import Testimonials from './Components/Testimonials/Testimonials'
 import Footer from './Components/Footer/Footer'
+import HowItWorks from './Components/HowItWorks/HowItWorks'
+import Contact from './Components/Contact/Contact'
 const BannerData1 = {
   image: Img1,
   tag: "LEARN ON YOUR SCHEDULE",
   title: "Find a Tutor That Fits Your Schedule",
   subtitle:
     "Choose a tutor based on your availability and learning goals. Find flexible lesson times that fit naturally into your daily routine.",
-  link: "#tutors",
+  buttonText: "Check Availability",
 };
 
 const BannerData2 = {
@@ -25,22 +27,24 @@ const BannerData2 = {
   title: "Learn From Tutors Who Match Your Goals",
   subtitle:
     "Explore tutors with different skills and teaching styles. Find someone who matches your subject, learning needs, and preferred way of studying.",
-  link: "#tutors",
+  buttonText: "Explore Tutors",
 };
 
 const App = () => {
   return (
-    <main className='overflow-hidden'>
+    <main className="overflow-x-clip">
 
       <Navbar />
       <NavbarBanner />
       <Hero/>
       <NumberCounter/>
-      <WhyChooseUs/>
       <Banner {...BannerData1} />
       <Banner {...BannerData2} reverse={true}/>
       <SubjectCard/>
+      <HowItWorks/>
+      <WhyChooseUs/>
       <Testimonials/>
+      <Contact/>
       <Footer/>
 
     </main>

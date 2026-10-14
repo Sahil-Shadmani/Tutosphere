@@ -21,7 +21,7 @@ export const NavbarMenu = [
   },
   {
     id: 5,
-    title: "Contact",
-    link: "#contact",
+    title: "Why Us",
+    link: "#why-us",
   },
 ];

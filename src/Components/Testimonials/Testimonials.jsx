@@ -38,24 +38,9 @@ const TestimonialsData = [
     text: "I enjoyed the simple interface and the ability to choose a tutor based on my specific learning goals.",
     img: "https://picsum.photos/103/103",
   },
-  {
-    id: 6,
-    name: "Michael Brown",
-    role: "Physics Student",
-    text: "It was easy to find a tutor who understood what I needed help with. The flexible sessions were a big plus.",
-    img: "https://picsum.photos/106/106",
-  },
-  {
-    id: 7,
-    name: "Olivia Davis",
-    role: "Psychology Student",
-    text: "The clean interface made everything easy to understand, and I could quickly find a tutor that suited my goals.",
-    img: "https://picsum.photos/107/107",
-  },
 ]
 
 const Testimonials = () => {
-
   const settings = {
     dots: true,
     arrows: false,
@@ -84,100 +69,73 @@ const Testimonials = () => {
   }
 
   return (
-    <section id="testimonials" className="bg-[#f9fafc] py-20">
-
+    <section id="testimonials" className="bg-[#f9f9f9] pt-6 pb-14 md:pt-8 md:pb-16">
       <div className="container">
 
         {/* Header Section */}
-
-        <div className="text-center max-w-[600px] mx-auto mb-12">
-          <h2 className="uppercase font-semibold text-orange-600">
+        <div className="text-center max-w-[600px] mx-auto mb-10">
+          <h2 className="uppercase font-semibold text-orange-600 text-sm">
             Our Testimonials
           </h2>
-
-          <p className="font-semibold text-3xl md:text-4xl mt-3">
+          <p className="font-semibold text-2xl md:text-3xl mt-2">
             What Our Students Say
           </p>
-
-          <p className="text-gray-500 mt-4">
-            See how students are finding the right tutors and making
-            learning more flexible.
+          <p className="text-gray-500 text-sm mt-2">
+            See how students are finding the right tutors and making learning more flexible.
           </p>
         </div>
 
         {/* Testimonial Slider */}
-
         <div className="testimonial-slider -mx-3">
-
           <Slider {...settings}>
-
             {TestimonialsData.map((item) => (
-              <div key={item.id} className="px-3 pb-8">
-
-                <div className="bg-white border border-gray-200 rounded-2xl p-7 min-h-[310px] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-
+              <div key={item.id} className="px-3 pb-6">
+                <div className="bg-[#f9fafc] border border-gray-200/80 rounded-xl p-6 min-h-[260px] shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                  
                   {/* Top Section */}
-
-                  <div className="flex justify-between items-center mb-6">
-
-                    <div className="w-11 h-11 rounded-full bg-secondary/10 flex items-center justify-center">
-                      <FaQuoteLeft className="text-secondary" />
+                  <div>
+                    <div className="flex justify-between items-center mb-4">
+                      <div className="w-9 h-9 rounded-full bg-secondary/10 flex items-center justify-center">
+                        <FaQuoteLeft className="text-secondary text-sm" />
+                      </div>
+                      <div className="flex gap-1">
+                        {[...Array(5)].map((_, index) => (
+                          <FaStar key={index} className="text-primary text-xs" />
+                        ))}
+                      </div>
                     </div>
 
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, index) => (
-                        <FaStar
-                          key={index}
-                          className="text-primary text-sm"
-                        />
-                      ))}
-                    </div>
-
+                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                      "{item.text}"
+                    </p>
                   </div>
 
-                  {/* Testimonial */}
-
-                  <p className="text-gray-600 text-sm leading-7 min-h-[120px]">
-                    "{item.text}"
-                  </p>
-
-                  {/* Student */}
-
-                  <div className="border-t border-gray-100 mt-6 pt-5">
-
-                    <div className="flex items-center gap-4">
-
+                  {/* Student Info */}
+                  <div className="border-t border-gray-200/60 mt-4 pt-4">
+                    <div className="flex items-center gap-3">
                       <img
                         src={item.img}
                         alt={item.name}
-                        className="w-12 h-12 rounded-full object-cover"
+                        className="w-10 h-10 rounded-full object-cover"
                       />
-
                       <div>
-                        <p className="font-semibold text-black/80">
+                        <p className="font-semibold text-sm text-black/80">
                           {item.name}
                         </p>
-
-                        <p className="text-sm text-gray-500 mt-1">
+                        <p className="text-xs text-gray-500">
                           {item.role}
                         </p>
                       </div>
-
                     </div>
-
                   </div>
 
                 </div>
-
               </div>
             ))}
-
           </Slider>
-
         </div>
 
       </div>
-
     </section>
   )
 }

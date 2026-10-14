@@ -1,20 +1,17 @@
 import React from 'react'
 
-const Banner = ({ image, title, subtitle, link, tag, reverse }) => {
+const Banner = ({ image, title, subtitle, buttonText, tag, reverse }) => {
   return (
-    <div className='bg-[#f9f9f9] pb-14'>
-
-      <div className="container">
+    <div className='bg-[#f9f9f9] pt-8 pb-6'>
+      <div id="tutors" className="container pt-24 -mt-24">
         <div className='grid grid-cols-1 md:grid-cols-2 space-y-6 md:space-y-0'>
 
           {/* Banner Image Section */}
-
           <div className={`flex justify-start items-center ${reverse && "md:order-last md:justify-end"}`}>
             <img src={image} alt="" className='w-[400px] h-full object-cover' />
           </div>
 
           {/* Banner Text Section */}
-
           <div className='flex flex-col justify-center text-center md:text-left space-y-4 lg:max-w-[500px]'>
             <p className='text-sm text-orange-600 font-semibold capitalize'>
               {tag}
@@ -29,15 +26,17 @@ const Banner = ({ image, title, subtitle, link, tag, reverse }) => {
             </p>
 
             <div className='flex justify-center md:justify-start'>
-              <a href={link} className='primary-btn mt-5'>
-                Get Started
-              </a>
+              <button 
+                type="button" 
+                className='primary-btn mt-5 cursor-default'
+              >
+                {buttonText}
+              </button>
             </div>
           </div>
 
         </div>
       </div>
-
     </div>
   )
 }

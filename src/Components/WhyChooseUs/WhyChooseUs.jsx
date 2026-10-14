@@ -9,7 +9,6 @@ const WhyChooseData = [
     icon: <FaUserGraduate />,
     bgColor: "#0063ff",
   },
-
   {
     id: 2,
     title: "Flexible Scheduling",
@@ -17,69 +16,60 @@ const WhyChooseData = [
     icon: <FaCalendarAlt />,
     bgColor: "#73bc00",
   },
-
   {
     id: 3,
     title: "Interactive Whiteboard",
-    desc: "Make lessons more engaging with interactive tools for explanations and collaboration.",
+    desc: "Make lessons more engaging with interactive tools for explanations.",
     icon: <FaChalkboardTeacher />,
     bgColor: "#fa6400",
   },
-
   {
     id: 4,
     title: "Affordable Prices",
-    desc: "Explore tutors at different price points and choose an option that fits your budget.",
+    desc: "Explore tutors at different price points that fit your budget.",
     icon: <FaWallet />,
     bgColor: "#fe6baa",
   },
 ];
 
 const WhyChooseUs = () => {
-  return (
-    <div id='why-us' className='bg-[#f9fafc]'>
-      <div className='container py-24'>
+  return ( 
+    <div id='why-us' className='bg-[#f9fafc] scroll-mt-15'>
+      <div className='container pt-14 pb-6 md:pt-16 md:pb-8'>
 
         {/* Header Section */}
-
-        <div className='space-y-4 p-6 text-center max-w-[500px] mx-auto mb-5'>
-          <h1 className='uppercase font-semibold text-orange-600'>
+        <div className='space-y-3 p-4 text-center max-w-[500px] mx-auto mb-8'>
+          <h2 className='uppercase font-semibold text-orange-600 text-sm'>
             Why Choose Us
-          </h1>
-
-          <p className='font-semibold text-3xl'>
+          </h2>
+          <p className='font-semibold text-2xl md:text-3xl'>
             Why Students Choose TutoSphere
           </p>
         </div>
 
         {/* Cards Section */}
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {WhyChooseData.map((item) => {
-            return (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {WhyChooseData.map((item) => (
+            <div
+              key={item.id}
+              className="space-y-3 p-5 bg-white border border-gray-200/80 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+            >
               <div
-                key={item.id}
-                className="space-y-4 p-6 rounded-xl shadow-[0_0_22px_rgba(0,0,0,0.15)]"
+                style={{ backgroundColor: item.bgColor }}
+                className="w-10 h-10 rounded-lg flex justify-center items-center text-white text-xl"
               >
-                <div
-                  style={{ backgroundColor: item.bgColor }}
-                  className="w-10 h-10 rounded-lg flex justify-center items-center text-white"
-                >
-                  <div className="text-2xl">
-                    {item.icon}
-                  </div>
-                </div>
-
-                <p className="font-semibold text-lg">
-                  {item.title}
-                </p>
-
-                <p className="text-sm text-gray-500">
-                  {item.desc}
-                </p>
+                {item.icon}
               </div>
-            );
-          })}
+
+              <h3 className="font-semibold text-base text-gray-800">
+                {item.title}
+              </h3>
+
+              <p className="text-xs text-gray-500 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
 
       </div>

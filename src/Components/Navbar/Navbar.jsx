@@ -7,8 +7,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative">
-      <nav className="relative z-30 bg-white">
+    <div className="sticky top-0 z-50">
+      <nav className="relative bg-white shadow-sm">
         <div className="container flex justify-between items-center py-5 lg:py-6">
 
           {/* Logo Section */}
@@ -53,12 +53,11 @@ const Navbar = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-6">
 
-            <button
-              type="button"
-              className="font-medium text-gray-700 hover:text-secondary transition-colors duration-300"
+            <a href="#contact"
+              className="font-medium text-gray-800 hover:text-secondary transition-colors duration-300"
             >
-              Sign In
-            </button>
+              Contact
+            </a>
 
             <a
               href="#tutors"

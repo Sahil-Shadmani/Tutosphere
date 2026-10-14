@@ -1,53 +1,62 @@
 import React from "react";
-import { FaBook } from "react-icons/fa";
+import { 
+  FaCalculator, 
+  FaBookOpen, 
+  FaCode, 
+  FaFlask, 
+  FaLandmark, 
+  FaBrain, 
+  FaLaptopCode, 
+  FaThLarge 
+} from "react-icons/fa";
 
 const subjectList = [
   {
     id: 1,
     name: "Mathematics",
-    icon: <FaBook />,
+    icon: <FaCalculator />,
     color: "#0063ff",
   },
   {
     id: 2,
     name: "English",
-    icon: <FaBook />,
+    icon: <FaBookOpen />,
     color: "#00c986",
   },
   {
     id: 3,
     name: "Programming",
-    icon: <FaBook />,
+    icon: <FaCode />,
     color: "#922aee",
   },
   {
     id: 4,
     name: "Science",
-    icon: <FaBook />,
+    icon: <FaFlask />,
     color: "#ea7516",
   },
   {
     id: 5,
     name: "History",
-    icon: <FaBook />,
+    icon: <FaLandmark />,
     color: "#075267",
   },
   {
     id: 6,
     name: "Psychology",
-    icon: <FaBook />,
+    icon: <FaBrain />,
     color: "#986d1d",
   },
   {
     id: 7,
     name: "Web Development",
-    icon: <FaBook />,
+    icon: <FaLaptopCode />,
     color: "#b93838",
   },
   {
     id: 8,
     name: "See All Subjects",
-    icon: <FaBook />,
+    icon: <FaThLarge />,
     color: "#464646",
   },
 ];
@@ -55,10 +64,9 @@ const subjectList = [
 const SubjectCard = () => {
   return (
     <>
-      <div id="subjects" className="container py-14 md:py-24">
+      <div id="subjects" className="container pt-14 pb-6 md:pt-16 md:pb-8 scroll-mt-15">
 
         {/* Header Section */}
-
         <div className="space-y-4 p-6 text-center max-w-[600px] mx-auto mb-5">
           <h1 className="uppercase font-semibold text-orange-500">
             Explore Subjects
@@ -70,7 +78,6 @@ const SubjectCard = () => {
         </div>
 
         {/* Cards Section */}
-
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {subjectList.map((subject) => {
             return (
@@ -83,12 +90,12 @@ const SubjectCard = () => {
                     color: subject.color,
                     backgroundColor: subject.color + "20",
                   }}
-                  className="w-10 h-10 rounded-md flex justify-center items-center"
+                  className="w-10 h-10 rounded-md flex justify-center items-center text-lg"
                 >
                   {subject.icon}
                 </div>
 
-                <p>{subject.name}</p>
+                <p className="font-medium text-slate-800">{subject.name}</p>
               </div>
             );
           })}

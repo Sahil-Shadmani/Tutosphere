@@ -4,7 +4,7 @@ import {FaPlay} from 'react-icons/fa'
 const Hero = () => {
   return (
     <>
-        <div id='home' className="container grid grid-cols-1 md:grid-cols-2 min-h-[650px] relative">
+        <div id='home' className="container grid grid-cols-1 md:grid-cols-2 min-h-[650px] relative scroll-mt-7">
 
             {/* Brand Info */}
 
@@ -18,9 +18,9 @@ const Hero = () => {
                         Find Your Perfect <span className='text-primary'>Tutor</span> 
                     </h1>
 
-                    <p className='primae'>
-                        Find the right tutor for 1-on-1 lessons and learn at your own pace with a schedule that works for you.
-                    </p>
+                   <p className='text-xm text-slate-500'>
+    Find the right tutor for 1-on-1 lessons and learn at your own pace with a schedule that works for you.
+</p>
 
                     {/* Button Section */}
 
