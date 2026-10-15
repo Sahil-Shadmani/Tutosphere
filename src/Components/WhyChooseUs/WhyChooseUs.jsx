@@ -34,7 +34,7 @@ const WhyChooseData = [
 
 const WhyChooseUs = () => {
   return ( 
-    <div id='why-us' className='bg-[#f9fafc] scroll-mt-15'>
+    <div id='why-us' className='bg-[#f9fafc] scroll-mt-10 md:scroll-mt-15'>
       <div className='container pt-14 pb-6 md:pt-16 md:pb-8'>
 
         {/* Header Section */}

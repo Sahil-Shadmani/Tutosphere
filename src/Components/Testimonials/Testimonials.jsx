@@ -41,36 +41,28 @@ const TestimonialsData = [
 ]
 
 const Testimonials = () => {
-  const settings = {
-    dots: true,
-    arrows: false,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    autoplay: false,
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
+const settings = {
+  dots: true,
+  arrows: false,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  autoplay: false,
+  responsive: [
+    {
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
       },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  }
+    },
+  ],
+}
 
   return (
-    <section id="testimonials" className="bg-[#f9f9f9] pt-6 pb-14 md:pt-8 md:pb-16">
-      <div className="container">
+    <section id="testimonials" className="bg-[#f9f9f9] pt-6 pb-14 md:pt-8 md:pb-16 scroll-mt-24 overflow-hidden">
+      <div className="container px-4 sm:px-6">
 
         {/* Header Section */}
         <div className="text-center max-w-[600px] mx-auto mb-10">
@@ -86,19 +78,19 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonial Slider */}
-        <div className="testimonial-slider -mx-3">
+        <div className="max-w-4xl mx-auto">
           <Slider {...settings}>
             {TestimonialsData.map((item) => (
-              <div key={item.id} className="px-3 pb-6">
-                <div className="bg-[#f9fafc] border border-gray-200/80 rounded-xl p-6 min-h-[260px] shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+              <div key={item.id} className="px-2 sm:px-3 pb-6">
+                <div className="bg-[#f9fafc] border border-gray-200/80 rounded-xl p-5 sm:p-6 min-h-[250px] h-auto shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
                   
                   {/* Top Section */}
                   <div>
-                    <div className="flex justify-between items-center mb-4">
-                      <div className="w-9 h-9 rounded-full bg-secondary/10 flex items-center justify-center">
+                    <div className="flex justify-between items-center mb-3">
+                      <div className="w-9 h-9 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
                         <FaQuoteLeft className="text-secondary text-sm" />
                       </div>
-                      <div className="flex gap-1">
+                      <div className="flex gap-1 shrink-0">
                         {[...Array(5)].map((_, index) => (
                           <FaStar key={index} className="text-primary text-xs" />
                         ))}
@@ -111,12 +103,12 @@ const Testimonials = () => {
                   </div>
 
                   {/* Student Info */}
-                  <div className="border-t border-gray-200/60 mt-4 pt-4">
+                  <div className="border-t border-gray-200/60 mt-4 pt-3">
                     <div className="flex items-center gap-3">
                       <img
                         src={item.img}
                         alt={item.name}
-                        className="w-10 h-10 rounded-full object-cover"
+                        className="w-10 h-10 rounded-full object-cover shrink-0"
                       />
                       <div>
                         <p className="font-semibold text-sm text-black/80">

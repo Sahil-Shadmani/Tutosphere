@@ -2,16 +2,46 @@ import React, { useState } from 'react';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
+  // Form input state
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
   const [submitted, setSubmitted] = useState(false);
 
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // Handle submit & clear form
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+
+    // Reset input fields
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
+
+    // Hide success message after 3 seconds
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 3000);
   };
 
   return (
-    <section id="contact" className="bg-[#f9fafc] py-14 md:py-16 scroll-mt-24">
+    <section
+  id="contact"
+  className="bg-[#f9fafc] py-8 md:py-16 scroll-mt-18 md:scroll-mt-20"
+>
       <div className="container">
         {/* Header Section */}
         <div className="text-center max-w-[500px] mx-auto mb-10">
@@ -29,7 +59,7 @@ const Contact = () => {
         {/* Content Grid */}
         <div className="max-w-4xl mx-auto bg-white border border-gray-200/80 rounded-2xl shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-5">
           
-          {/* Left Column: Direct Info (2 columns) */}
+          {/* Left Column: Direct Info */}
           <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 sm:p-8 md:col-span-2 flex flex-col justify-between space-y-6">
             <div>
               <h3 className="text-xl font-semibold mb-2">Contact Information</h3>
@@ -50,7 +80,7 @@ const Contact = () => {
                 <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
                   <FaPhoneAlt className="text-white text-sm" />
                 </div>
-                <span>+1 (800) 123-4567</span>
+                <span>+91 98765 00000</span>
               </div>
 
               <div className="flex items-center gap-3">
@@ -66,7 +96,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right Column: Lightweight Form (3 columns) */}
+          {/* Right Column: Controlled Form */}
           <div className="p-6 sm:p-8 md:col-span-3 bg-white">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -74,6 +104,9 @@ const Contact = () => {
                   <label className="block text-xs font-semibold text-gray-700 mb-1">Your Name</label>
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                     placeholder="John Doe"
                     className="w-full px-3.5 py-2 text-xs sm:text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
@@ -83,6 +116,9 @@ const Contact = () => {
                   <label className="block text-xs font-semibold text-gray-700 mb-1">Email Address</label>
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     required
                     placeholder="john@example.com"
                     className="w-full px-3.5 py-2 text-xs sm:text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
@@ -94,6 +130,9 @@ const Contact = () => {
                 <label className="block text-xs font-semibold text-gray-700 mb-1">Subject</label>
                 <input
                   type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
                   placeholder="Inquiry about tutoring"
                   className="w-full px-3.5 py-2 text-xs sm:text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
                 />
@@ -103,6 +142,9 @@ const Contact = () => {
                 <label className="block text-xs font-semibold text-gray-700 mb-1">Message</label>
                 <textarea
                   rows="3"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   required
                   placeholder="How can we help you?"
                   className="w-full px-3.5 py-2 text-xs sm:text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all resize-none"

@@ -27,7 +27,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <div id="how-it-works" className="container pt-6 pb-14 md:pt-8 md:pb-16 scroll-mt-24">
+    <div id="how-it-works" className="container pt-6 pb-14 md:pt-8 md:pb-16 scroll-mt-20 md:scroll-mt-24">
       {/* Header */}
       <div className="text-center max-w-[600px] mx-auto space-y-3 mb-12">
         <p className="uppercase font-semibold text-orange-600 text-sm">

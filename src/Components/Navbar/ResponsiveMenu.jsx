@@ -47,8 +47,8 @@ const ResponsiveMenu = ({ isOpen, setIsOpen }) => {
 
           {/* Sign In */}
           <li className="pt-2">
-            <button
-              type="button"
+            <a
+              href="#contact"
               onClick={() => setIsOpen(false)}
               className="
                 font-semibold
@@ -57,8 +57,8 @@ const ResponsiveMenu = ({ isOpen, setIsOpen }) => {
                 duration-300
               "
             >
-              Sign In
-            </button>
+              Contact
+            </a>
           </li>
 
           {/* Get Started */}

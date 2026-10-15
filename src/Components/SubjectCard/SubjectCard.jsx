@@ -64,7 +64,7 @@ const subjectList = [
 const SubjectCard = () => {
   return (
     <>
-      <div id="subjects" className="container pt-14 pb-6 md:pt-16 md:pb-8 scroll-mt-15">
+      <div id="subjects" className="container pt-4 pb-6 md:pt-16 md:pb-8 scroll-mt-16 md:scroll-mt-10">
 
         {/* Header Section */}
         <div className="space-y-4 p-6 text-center max-w-[600px] mx-auto mb-5">
@@ -78,24 +78,24 @@ const SubjectCard = () => {
         </div>
 
         {/* Cards Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
           {subjectList.map((subject) => {
             return (
               <div
                 key={subject.id}
-                className="border rounded-lg border-secondary/20 p-4 flex justify-start items-center gap-4 hover:!scale-105 hover:!shadow-xl transition-all duration-200 cursor-pointer"
+                className="border rounded-lg border-secondary/20 p-3 sm:p-4 flex justify-start items-center gap-3 sm:gap-4 hover:!scale-105 hover:!shadow-xl transition-all duration-200 cursor-pointer"
               >
                 <div
                   style={{
                     color: subject.color,
                     backgroundColor: subject.color + "20",
                   }}
-                  className="w-10 h-10 rounded-md flex justify-center items-center text-lg"
+                  className="w-10 h-10 rounded-md flex justify-center items-center text-lg shrink-0"
                 >
                   {subject.icon}
                 </div>
 
-                <p className="font-medium text-slate-800">{subject.name}</p>
+                <p className="font-medium text-slate-800 text-xs sm:text-sm leading-tight">{subject.name}</p>
               </div>
             );
           })}
