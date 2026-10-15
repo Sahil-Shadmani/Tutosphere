@@ -16,18 +16,17 @@ const FooterBg = {
 };
 
 const Footer = () => {
+
   return (
+
     <footer style={FooterBg} className="rounded-t-3xl">
       <div className="bg-primary/5">
 
         <div className="container">
 
-          {/* Main Footer */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-12">
 
-            {/* Brand */}
             <div className="px-4">
-
               <a
                 href="#home"
                 className="flex items-center gap-2 text-2xl font-bold"
@@ -41,7 +40,6 @@ const Footer = () => {
                 flexible learning options that fit your goals.
               </p>
 
-              {/* Social Icons */}
               <div className="flex items-center gap-5 mt-6">
 
                 <a
@@ -51,13 +49,13 @@ const Footer = () => {
                   <FaInstagram className="text-2xl" />
                 </a>
 
-                 <a
+                <a
                   aria-label="LinkedIn"
                   className="hover:text-secondary hover:scale-110 transition-all duration-200"
                 >
                   <FaFacebook className="text-2xl" />
                 </a>
-                
+
                 <a
                   aria-label="GitHub"
                   className="hover:text-secondary hover:scale-110 transition-all duration-200"
@@ -71,18 +69,11 @@ const Footer = () => {
                 >
                   <FaLinkedin className="text-2xl" />
                 </a>
-
-               
-
                 
-
               </div>
-
             </div>
 
-            {/* Navigation */}
             <div className="px-4 md:flex md:justify-end">
-
               <div>
 
                 <h2 className="text-lg font-bold mb-5">
@@ -90,7 +81,6 @@ const Footer = () => {
                 </h2>
 
                 <ul className="grid grid-cols-2 gap-x-12 gap-y-3">
-
                   <li>
                     <a
                       href="#home"
@@ -135,18 +125,13 @@ const Footer = () => {
                       Contact
                     </a>
                   </li>
-
                 </ul>
 
               </div>
-
             </div>
-
           </div>
 
-          {/* Bottom Bar */}
           <div className="border-t border-gray-800/10 py-5">
-
             <div className="flex flex-col sm:flex-row justify-between items-center gap-2 text-sm text-black/50">
 
               <p>
@@ -158,11 +143,8 @@ const Footer = () => {
               </p>
 
             </div>
-
           </div>
-
         </div>
-
       </div>
     </footer>
   );

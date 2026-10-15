@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const NavbarBanner = () => {
+
   const [isOpen, setIsOpen] = useState(true);
 
   if (!isOpen) {
@@ -8,6 +9,7 @@ const NavbarBanner = () => {
   }
 
   return (
+
     <div className="bg-primary text-slate-900 text-xs sm:text-sm text-center font-medium py-2.5 px-10 relative">
       <span>
         Find the right tutor for your learning goals.
@@ -36,8 +38,7 @@ const NavbarBanner = () => {
           hover:text-secondary
           transition-colors
           duration-200
-          leading-none
-        "
+          leading-none"
         onClick={() => setIsOpen(false)}
       >
         ×

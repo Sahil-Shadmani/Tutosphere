@@ -4,14 +4,15 @@ import { MdComputer, MdMenu } from "react-icons/md";
 import ResponsiveMenu from "./ResponsiveMenu";
 
 const Navbar = () => {
+  
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+
     <div className="sticky top-0 z-50">
       <nav className="relative bg-white shadow-sm">
         <div className="container flex justify-between items-center py-5 lg:py-6">
 
-          {/* Logo Section */}
           <a
             href="#home"
             className="text-2xl flex items-center gap-2 font-bold"
@@ -20,11 +21,12 @@ const Navbar = () => {
             <p>TutoSphere</p>
           </a>
 
-          {/* Desktop Menu */}
           <div className="hidden lg:block">
             <ul className="flex items-center gap-5">
               {NavbarMenu.map((item) => {
+                
                 return (
+                  
                   <li key={item.id}>
                     <a
                       href={item.link}
@@ -50,10 +52,10 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-6">
 
-            <a href="#contact"
+            <a 
+              href="#contact"
               className="font-medium text-gray-800 hover:text-secondary transition-colors duration-300"
             >
               Contact
@@ -71,15 +73,13 @@ const Navbar = () => {
                 hover:scale-105
                 hover:shadow-lg
                 transition-all
-                duration-300
-              "
+                duration-300"
             >
               Get Started
             </a>
 
           </div>
 
-          {/* Mobile Hamburger */}
           <button
             type="button"
             aria-label="Open menu"
@@ -92,7 +92,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       <ResponsiveMenu
         isOpen={isOpen}
         setIsOpen={setIsOpen}

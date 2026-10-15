@@ -12,6 +12,7 @@ import Testimonials from './Components/Testimonials/Testimonials'
 import Footer from './Components/Footer/Footer'
 import HowItWorks from './Components/HowItWorks/HowItWorks'
 import Contact from './Components/Contact/Contact'
+
 const BannerData1 = {
   image: Img1,
   tag: "LEARN ON YOUR SCHEDULE",
@@ -36,16 +37,16 @@ const App = () => {
 
       <Navbar />
       <NavbarBanner />
-      <Hero/>
-      <NumberCounter/>
+      <Hero />
+      <NumberCounter />
       <Banner {...BannerData1} />
-      <Banner {...BannerData2} reverse={true}/>
-      <SubjectCard/>
-      <HowItWorks/>
-      <WhyChooseUs/>
-      <Testimonials/>
-      <Contact/>
-      <Footer/>
+      <Banner {...BannerData2} reverse={true} />
+      <SubjectCard />
+      <HowItWorks />
+      <WhyChooseUs />
+      <Testimonials />
+      <Contact />
+      <Footer />
 
     </main>
   )

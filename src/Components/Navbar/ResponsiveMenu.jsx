@@ -2,7 +2,9 @@ import React from "react";
 import { NavbarMenu } from "../../MockData/data";
 
 const ResponsiveMenu = ({ isOpen, setIsOpen }) => {
+  
   return (
+    
     <div
       className={`
         absolute
@@ -13,19 +15,16 @@ const ResponsiveMenu = ({ isOpen, setIsOpen }) => {
         transition-all
         duration-300
         ease-in-out
-        ${
-          isOpen
-            ? "translate-y-0 opacity-100"
-            : "-translate-y-5 opacity-0 pointer-events-none"
+        ${isOpen
+          ? "translate-y-0 opacity-100"
+          : "-translate-y-5 opacity-0 pointer-events-none"
         }
       `}
     >
       <div className="bg-primary text-white py-8 rounded-b-3xl shadow-xl">
-
         <ul className="flex flex-col justify-center items-center gap-6">
-
-          {/* Navigation Links */}
           {NavbarMenu.map((item) => {
+            
             return (
               <li key={item.id}>
                 <a
@@ -36,8 +35,7 @@ const ResponsiveMenu = ({ isOpen, setIsOpen }) => {
                     font-semibold
                     hover:text-secondary
                     transition-colors
-                    duration-300
-                  "
+                    duration-300"
                 >
                   {item.title}
                 </a>
@@ -45,7 +43,6 @@ const ResponsiveMenu = ({ isOpen, setIsOpen }) => {
             );
           })}
 
-          {/* Sign In */}
           <li className="pt-2">
             <a
               href="#contact"
@@ -54,14 +51,12 @@ const ResponsiveMenu = ({ isOpen, setIsOpen }) => {
                 font-semibold
                 hover:text-secondary
                 transition-colors
-                duration-300
-              "
+                duration-300"
             >
               Contact
             </a>
           </li>
 
-          {/* Get Started */}
           <li>
             <a
               href="#tutors"
@@ -77,15 +72,12 @@ const ResponsiveMenu = ({ isOpen, setIsOpen }) => {
                 hover:scale-105
                 hover:shadow-lg
                 transition-all
-                duration-300
-              "
+                duration-300"
             >
               Get Started
             </a>
           </li>
-
         </ul>
-
       </div>
     </div>
   );

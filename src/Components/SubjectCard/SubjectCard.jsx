@@ -1,13 +1,13 @@
 import React from "react";
-import { 
-  FaCalculator, 
-  FaBookOpen, 
-  FaCode, 
-  FaFlask, 
-  FaLandmark, 
-  FaBrain, 
-  FaLaptopCode, 
-  FaThLarge 
+import {
+  FaCalculator,
+  FaBookOpen,
+  FaCode,
+  FaFlask,
+  FaLandmark,
+  FaBrain,
+  FaLaptopCode,
+  FaThLarge
 } from "react-icons/fa";
 
 const subjectList = [
@@ -62,11 +62,11 @@ const subjectList = [
 ];
 
 const SubjectCard = () => {
+
   return (
     <>
       <div id="subjects" className="container pt-4 pb-6 md:pt-16 md:pb-8 scroll-mt-16 md:scroll-mt-10">
 
-        {/* Header Section */}
         <div className="space-y-4 p-6 text-center max-w-[600px] mx-auto mb-5">
           <h1 className="uppercase font-semibold text-orange-500">
             Explore Subjects
@@ -77,9 +77,9 @@ const SubjectCard = () => {
           </p>
         </div>
 
-        {/* Cards Section */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
           {subjectList.map((subject) => {
+            
             return (
               <div
                 key={subject.id}

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
-  // Form input state
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,38 +12,31 @@ const Contact = () => {
 
   const [submitted, setSubmitted] = useState(false);
 
-  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Handle submit & clear form
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
-
-    // Reset input fields
     setFormData({
       name: '',
       email: '',
       subject: '',
       message: '',
     });
-
-    // Hide success message after 3 seconds
     setTimeout(() => {
       setSubmitted(false);
     }, 3000);
   };
 
   return (
-    <section
-  id="contact"
-  className="bg-[#f9fafc] py-8 md:py-16 scroll-mt-18 md:scroll-mt-20"
->
+
+    <section id="contact" className="bg-[#f9fafc] py-8 md:py-16 scroll-mt-18 md:scroll-mt-20">
+      
       <div className="container">
-        {/* Header Section */}
+
         <div className="text-center max-w-[500px] mx-auto mb-10">
           <h2 className="uppercase font-semibold text-orange-600 text-sm tracking-wide">
             Get In Touch
@@ -56,10 +49,8 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* Content Grid */}
         <div className="max-w-4xl mx-auto bg-white border border-gray-200/80 rounded-2xl shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-5">
-          
-          {/* Left Column: Direct Info */}
+
           <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 sm:p-8 md:col-span-2 flex flex-col justify-between space-y-6">
             <div>
               <h3 className="text-xl font-semibold mb-2">Contact Information</h3>
@@ -96,7 +87,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right Column: Controlled Form */}
           <div className="p-6 sm:p-8 md:col-span-3 bg-white">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -168,7 +158,6 @@ const Contact = () => {
               </div>
             </form>
           </div>
-
         </div>
       </div>
     </section>

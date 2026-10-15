@@ -41,30 +41,30 @@ const TestimonialsData = [
 ]
 
 const Testimonials = () => {
-const settings = {
-  dots: true,
-  arrows: false,
-  infinite: false,
-  speed: 500,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  autoplay: false,
-  responsive: [
-    {
-      breakpoint: 640,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
+  const settings = {
+    dots: true,
+    arrows: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: false,
+    responsive: [
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
       },
-    },
-  ],
-}
+    ],
+  }
 
   return (
+    
     <section id="testimonials" className="bg-[#f9f9f9] pt-6 pb-14 md:pt-8 md:pb-16 scroll-mt-24 overflow-hidden">
       <div className="container px-4 sm:px-6">
 
-        {/* Header Section */}
         <div className="text-center max-w-[600px] mx-auto mb-10">
           <h2 className="uppercase font-semibold text-orange-600 text-sm">
             Our Testimonials
@@ -77,14 +77,13 @@ const settings = {
           </p>
         </div>
 
-        {/* Testimonial Slider */}
         <div className="max-w-4xl mx-auto">
+          
           <Slider {...settings}>
             {TestimonialsData.map((item) => (
               <div key={item.id} className="px-2 sm:px-3 pb-6">
                 <div className="bg-[#f9fafc] border border-gray-200/80 rounded-xl p-5 sm:p-6 min-h-[250px] h-auto shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-                  
-                  {/* Top Section */}
+
                   <div>
                     <div className="flex justify-between items-center mb-3">
                       <div className="w-9 h-9 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
@@ -102,7 +101,6 @@ const settings = {
                     </p>
                   </div>
 
-                  {/* Student Info */}
                   <div className="border-t border-gray-200/60 mt-4 pt-3">
                     <div className="flex items-center gap-3">
                       <img
@@ -120,16 +118,14 @@ const settings = {
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
             ))}
           </Slider>
         </div>
-
       </div>
     </section>
   )
 }
 
-export default Testimonials
+export default Testimonials;

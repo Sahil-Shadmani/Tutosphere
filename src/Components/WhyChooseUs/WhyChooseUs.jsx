@@ -33,11 +33,11 @@ const WhyChooseData = [
 ];
 
 const WhyChooseUs = () => {
-  return ( 
+
+  return (
     <div id='why-us' className='bg-[#f9fafc] scroll-mt-10 md:scroll-mt-15'>
       <div className='container pt-14 pb-6 md:pt-16 md:pb-8'>
 
-        {/* Header Section */}
         <div className='space-y-3 p-4 text-center max-w-[500px] mx-auto mb-8'>
           <h2 className='uppercase font-semibold text-orange-600 text-sm'>
             Why Choose Us
@@ -47,7 +47,6 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
-        {/* Cards Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {WhyChooseData.map((item) => (
             <div
@@ -71,10 +70,9 @@ const WhyChooseUs = () => {
             </div>
           ))}
         </div>
-
       </div>
     </div>
   )
 }
 
-export default WhyChooseUs
+export default WhyChooseUs;

@@ -26,9 +26,11 @@ const steps = [
 ];
 
 const HowItWorks = () => {
+
   return (
+
     <div id="how-it-works" className="container pt-6 pb-14 md:pt-8 md:pb-16 scroll-mt-20 md:scroll-mt-24">
-      {/* Header */}
+      
       <div className="text-center max-w-[600px] mx-auto space-y-3 mb-12">
         <p className="uppercase font-semibold text-orange-600 text-sm">
           Simple Steps
@@ -37,16 +39,15 @@ const HowItWorks = () => {
           How TutoSphere Works
         </h2>
       </div>
-
-      {/* 3-Step Grid */}
+      
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {steps.map((step) => (
-          <div 
-            key={step.id} 
+          <div
+            key={step.id}
             className="bg-[#f9f9f9] p-6 rounded-2xl flex flex-col items-center text-center space-y-4 hover:shadow-md transition-shadow"
           >
-            <div 
-              style={{ color: step.color, backgroundColor: step.color + "20" }} 
+            <div
+              style={{ color: step.color, backgroundColor: step.color + "20" }}
               className="w-14 h-14 rounded-full flex justify-center items-center text-2xl"
             >
               {step.icon}
@@ -60,4 +61,4 @@ const HowItWorks = () => {
   )
 }
 
-export default HowItWorks
+export default HowItWorks;

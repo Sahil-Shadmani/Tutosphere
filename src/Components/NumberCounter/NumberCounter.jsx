@@ -1,6 +1,8 @@
 import React from 'react'
 import CountUp from 'react-countup'
+
 const NumberCounter = () => {
+  
   return (
     <div className='bg-secondary text-white py-12'>
         <div className="container grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -14,6 +16,7 @@ const NumberCounter = () => {
                 </p>
                 <p>Expert Tutors</p>
             </div>
+            
             <div className='flex flex-col items-center justify-center'>
                 <p className='text-3xl font-semibold'>
                     <CountUp 
@@ -26,6 +29,7 @@ const NumberCounter = () => {
                 </p>
                 <p>Learning Hours</p>
             </div>
+            
             <div className='flex flex-col items-center justify-center'>
                 <p className='text-3xl font-semibold'>
                     <CountUp 
@@ -36,6 +40,7 @@ const NumberCounter = () => {
                 </p>
                 <p>Subjects & Courses</p>
             </div>
+            
             <div className='flex flex-col items-center justify-center'>
                 <p className='text-3xl font-semibold'>
                     <CountUp 
@@ -53,4 +58,4 @@ const NumberCounter = () => {
   )
 }
 
-export default NumberCounter
+export default NumberCounter;

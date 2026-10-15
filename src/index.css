@@ -5,15 +5,17 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 @layer components {
   .primary-btn {
-    @apply bg-primary font-semibold px-6 py-3 rounded-full
-           hover:scale-110 hover:shadow-xl duration-300;
+    @apply bg-primary font-semibold px-6 py-3 rounded-full hover:scale-110 hover:shadow-xl duration-300;
   }
 }
+
 @theme {
   --color-primary: #ffcf3a;
   --color-secondary: #0063ff;
