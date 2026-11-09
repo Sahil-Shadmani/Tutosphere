@@ -6,10 +6,11 @@ A responsive online tutoring platform frontend built to help students explore su
 
 [Visit TutoSphere](https://tutosphere.vercel.app/)
 
-## ✨ Features
+## 🚀 Features
 
--  Responsive design for desktop, tablet, and mobile.
--  Modern navigation with a mobile menu.
+-  Reusable Components.
+-  Fully Responsive Layout.
+-  Easy Navigation.
 -  Subject exploration section.
 -  How It Works section.
 -  Interactive testimonial carousel.
@@ -23,6 +24,6 @@ A responsive online tutoring platform frontend built to help students explore su
 -  React Icons
 -  React Slick
 
-## 👨‍💻 Author
+## 👨‍🎓 Author
 
 **Sahil Shadmani**
