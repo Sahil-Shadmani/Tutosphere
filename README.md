@@ -24,6 +24,6 @@ A responsive online tutoring platform frontend built to help students explore su
 -  React Icons
 -  React Slick
 
-## 👨‍🎓 Author
+## 🧑‍💻 Author
 
 **Sahil Shadmani**
